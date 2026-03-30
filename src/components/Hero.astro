@@ -6,7 +6,7 @@ import '../styles/hero.css';
 <section class="hero">
   <div class="hero__container">
     <div class="hero__avatar">
-      <img src={hero.avatar} alt={hero.name} width="120" height="120" />
+      <img src={import.meta.env.BASE_URL + hero.avatar} alt={hero.name} width="120" height="120" />
     </div>
     <div class="hero__content">
       <h1 class="hero__name">{hero.name}</h1>

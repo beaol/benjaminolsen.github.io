@@ -1,0 +1,26 @@
+.edu-item {
+  padding: 1.25rem 1.5rem;
+}
+
+.edu-item__institution {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.edu-item__degree {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  margin-top: 0.25rem;
+}
+
+.edu-item__dates {
+  display: block;
+  margin-top: 0.25rem;
+}
+
+.edu-item__detail {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}

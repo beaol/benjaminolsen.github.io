@@ -1,0 +1,19 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import EducationItem from './EducationItem.astro';
+import { education } from '../data/education';
+import '../styles/education.css';
+---
+<SectionWrapper id="education" title="Education">
+  <div class="education__grid">
+    {education.map((entry) => (
+      <EducationItem
+        institution={entry.institution}
+        degree={entry.degree}
+        field={entry.field}
+        dates={entry.dates}
+        detail={entry.detail}
+      />
+    ))}
+  </div>
+</SectionWrapper>

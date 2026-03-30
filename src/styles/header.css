@@ -1,0 +1,113 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-nav-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header__nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: var(--nav-height);
+}
+
+.header__logo {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.header__logo:hover {
+  color: var(--color-accent);
+}
+
+.header__toggle {
+  display: none;
+}
+
+.header__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.header__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.header__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.header__links a {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+
+.header__links a:hover {
+  color: var(--color-accent);
+}
+
+@media (max-width: 768px) {
+  .header__hamburger {
+    display: flex;
+  }
+
+  .header__links {
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--color-nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1rem 1.5rem;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 1.5rem;
+  }
+
+  .header__links li a {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .header__toggle:checked ~ .header__links {
+    max-height: 400px;
+    padding: 0.5rem 1.5rem 1rem;
+  }
+
+  .header__toggle:checked ~ .header__hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .header__toggle:checked ~ .header__hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .header__toggle:checked ~ .header__hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}

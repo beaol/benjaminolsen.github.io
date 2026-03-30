@@ -1,0 +1,19 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import ProjectCard from './ProjectCard.astro';
+import { projects } from '../data/projects';
+import '../styles/projects.css';
+---
+<SectionWrapper id="projects" title="Projects" alt={true}>
+  <div class="projects__grid">
+    {projects.map((project) => (
+      <ProjectCard
+        title={project.title}
+        subtitle={project.subtitle}
+        dates={project.dates}
+        institution={project.institution}
+        skills={project.skills}
+      />
+    ))}
+  </div>
+</SectionWrapper>

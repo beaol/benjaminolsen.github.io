@@ -1,0 +1,17 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import { publications } from '../data/publications';
+import '../styles/publications.css';
+---
+<SectionWrapper id="publications" title="Publications">
+  {publications.map((pub) => (
+    <div class="card pub-card">
+      <p class="text-meta pub-card__venue">{pub.venue}</p>
+      <h3 class="pub-card__title">{pub.title}</h3>
+      <p class="pub-card__authors">{pub.authors}</p>
+      <a href={pub.link} target="_blank" rel="noopener noreferrer" class="pub-card__link">
+        {pub.linkText}
+      </a>
+    </div>
+  ))}
+</SectionWrapper>

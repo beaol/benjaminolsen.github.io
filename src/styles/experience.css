@@ -1,0 +1,23 @@
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience__company-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.experience__company-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+
+.experience__timeline {
+  border-left: 2px solid var(--color-border);
+  margin-left: 0;
+}

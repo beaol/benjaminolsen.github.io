@@ -1,0 +1,24 @@
+---
+import { contact } from '../data/contact';
+interface Props {
+  variant?: 'contact' | 'footer';
+}
+const { variant = 'contact' } = Astro.props;
+---
+{variant === 'contact' ? (
+  <ul class="contact__links">
+    <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
+    {contact.links.map((link) => (
+      <li>
+        <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+      </li>
+    ))}
+  </ul>
+) : (
+  <>
+    <a href={`mailto:${contact.email}`}>Email</a>
+    {contact.links.map((link) => (
+      <a href={link.href} target="_blank" rel="noopener noreferrer">{link.label}</a>
+    ))}
+  </>
+)}

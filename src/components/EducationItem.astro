@@ -1,0 +1,19 @@
+---
+import '../styles/education-item.css';
+interface Props {
+  institution: string;
+  degree: string;
+  field: string;
+  dates: string;
+  detail?: string;
+}
+
+const { institution, degree, field, dates, detail } = Astro.props;
+---
+
+<div class="card edu-item">
+  <h3 class="edu-item__institution">{institution}</h3>
+  <p class="edu-item__degree">{degree} — {field}</p>
+  <span class="text-meta edu-item__dates">{dates}</span>
+  {detail && <p class="edu-item__detail">{detail}</p>}
+</div>

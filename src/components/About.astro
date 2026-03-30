@@ -1,0 +1,10 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import { about } from '../data/about';
+import '../styles/about.css';
+---
+<SectionWrapper id="about" title="About">
+  <div class="about__content">
+    {about.paragraphs.map((p) => <p>{p}</p>)}
+  </div>
+</SectionWrapper>

@@ -1,0 +1,26 @@
+---
+import '../styles/project-card.css';
+interface Props {
+  title: string;
+  subtitle: string;
+  dates: string;
+  institution: string;
+  skills: string[];
+}
+
+const { title, subtitle, dates, institution, skills } = Astro.props;
+---
+
+<div class="card project-card">
+  <h3 class="project-card__title">{title}</h3>
+  <p class="project-card__subtitle">{subtitle}</p>
+  <div class="text-meta project-card__meta">
+    <span>{institution}</span>
+    <span>{dates}</span>
+  </div>
+  <div class="project-card__skills">
+    {skills.map((skill) => (
+      <span class="project-card__pill">{skill}</span>
+    ))}
+  </div>
+</div>

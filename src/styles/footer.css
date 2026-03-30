@@ -1,0 +1,28 @@
+.footer {
+  padding: 2rem 1.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer__links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer__links a {
+  color: var(--color-text-secondary);
+  font-size: 0.875rem;
+}
+
+.footer__links a:hover {
+  color: var(--color-accent);
+}

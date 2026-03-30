@@ -1,0 +1,129 @@
+/* ===== CSS Custom Properties ===== */
+:root {
+  --color-bg: #FAF8F5;
+  --color-bg-alt: #F2EDE8;
+  --color-surface: #FFFFFF;
+  --color-text: #2D2A26;
+  --color-text-secondary: #6B6560;
+  --color-text-muted: #9B9590;
+  --color-accent: #C17F59;
+  --color-accent-hover: #A8694A;
+  --color-border: #E5DFD8;
+  --color-nav-bg: rgba(250, 248, 245, 0.92);
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --max-width: 860px;
+  --nav-height: 64px;
+}
+
+/* ===== Reset ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-height) + 24px);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+/* ===== Typography ===== */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.125rem; }
+
+/* ===== Section Utilities ===== */
+.section {
+  padding: 4rem 1.5rem;
+}
+
+.section--alt {
+  background-color: var(--color-bg-alt);
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section__title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-accent);
+  border-radius: 2px;
+}
+
+/* ===== Card ===== */
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+/* ===== Utilities ===== */
+.text-meta {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+  .section {
+    padding: 5rem 2rem;
+  }
+
+  h1 { font-size: 2.75rem; }
+}
+

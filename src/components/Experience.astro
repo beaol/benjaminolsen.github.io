@@ -1,0 +1,28 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import ExperienceItem from './ExperienceItem.astro';
+import { companies } from '../data/experience';
+import '../styles/experience.css';
+---
+<SectionWrapper id="experience" title="Experience" alt={true}>
+  <div class="experience__list">
+    {companies.map((company) => (
+      <div class="experience__company">
+        <div class="experience__company-header">
+          <h3 class="experience__company-name">{company.name}</h3>
+          <span class="text-meta experience__company-duration">{company.duration}</span>
+        </div>
+        <div class="experience__timeline">
+          {company.roles.map((role) => (
+            <ExperienceItem
+              title={role.title}
+              dates={role.dates}
+              description={role.description}
+              bullets={role.bullets}
+            />
+          ))}
+        </div>
+      </div>
+    ))}
+  </div>
+</SectionWrapper>

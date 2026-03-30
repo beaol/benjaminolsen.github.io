@@ -1,0 +1,18 @@
+---
+import { hero } from '../data/hero';
+import '../styles/hero.css';
+---
+
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__avatar">
+      <img src={hero.avatar} alt={hero.name} width="120" height="120" />
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__name">{hero.name}</h1>
+      <p class="hero__title">{hero.title}</p>
+      <p class="hero__tagline">{hero.tagline}</p>
+      <p class="hero__location">{hero.location}</p>
+    </div>
+  </div>
+</section>

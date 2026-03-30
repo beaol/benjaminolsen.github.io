@@ -1,0 +1,11 @@
+---
+import SectionWrapper from './SectionWrapper.astro';
+import ContactLinks from './ContactLinks.astro';
+import '../styles/contact.css';
+---
+<SectionWrapper id="contact" title="Contact" alt={true}>
+  <div class="contact__content">
+    <p class="contact__intro">Interested in working together or just want to say hello?</p>
+    <ContactLinks variant="contact" />
+  </div>
+</SectionWrapper>
